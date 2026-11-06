@@ -79,19 +79,18 @@ body { min-width: 0; overflow: hidden; }
 
 .document-sheet .kb-body { margin-top: 28px; color: #2c3036; font-size: 16px; line-height: 1.85; white-space: pre-wrap; }
 .document-sheet textarea.kb-body { width: 100%; border: 1px dashed #c5d4f5; border-radius: 8px; padding: 12px; min-height: 180px; resize: vertical; }
+.document-window-title { min-width: 0; }
+.document-window-title strong { white-space: nowrap; }
 .kb-readonly { margin-left: 8px; color: #b07a12; font-size: 12px; }
 
 .knowledge-folder-menu button.danger { color: #d14343; }
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
+  .knowledge-doc-shell { height: 100vh; overflow: auto; }
+  .knowledge-doc-shell .standalone-document-page { width: 1180px; min-width: 1180px; }
   .knowledge-doc-shell .document-ai-panel { display: flex !important; }
-  .knowledge-doc-shell .document-workspace {
-    grid-template-columns: 180px minmax(520px, 1fr) minmax(300px, 360px) !important;
-    width: max-content;
-    min-width: 100%;
-    overflow: visible;
-  }
-  .knowledge-doc-shell { overflow: auto; }
+  .knowledge-doc-shell .document-workspace { grid-template-columns: 220px minmax(420px, 1fr) 360px !important; }
+  .knowledge-doc-shell .document-format-toolbar button { display: flex !important; }
 }
 
 @media (max-width: 760px) {
